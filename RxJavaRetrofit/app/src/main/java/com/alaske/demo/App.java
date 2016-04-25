@@ -1,13 +1,12 @@
 package com.alaske.demo;
 
 import android.app.Application;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.text.TextUtils;
 import android.util.Log;
 
 import com.alaske.demo.api.ApiManager;
-import com.alaske.demo.config.EnvConfig;
+import com.alaske.demo.api.config.EnvConfig;
 
 /**
  * Author: zhaocheng
@@ -39,7 +38,8 @@ public class App extends Application {
     private void initEnv() {
         String env = "";
         try {
-            getPackageManager().getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA).metaData.getString("APP_ENV");
+            String app_env = getPackageManager().getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA).metaData.getString("APP_ENV");
+            env = app_env;
         } catch (PackageManager.NameNotFoundException e) {
 
         }

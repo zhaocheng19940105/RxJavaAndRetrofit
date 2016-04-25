@@ -5,11 +5,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 import com.alaske.demo.App;
-import com.alaske.demo.config.EnvConfig;
-import com.alaske.demo.cookie.ClearableCookieJar;
-import com.alaske.demo.cookie.PersistentCookieJar;
-import com.alaske.demo.cookie.cache.SetCookieCache;
-import com.alaske.demo.cookie.presistence.SharedPrefsCookiePersistor;
+import com.alaske.demo.api.config.EnvConfig;
+import com.alaske.demo.api.cookie.ClearableCookieJar;
+import com.alaske.demo.api.cookie.PersistentCookieJar;
+import com.alaske.demo.api.cookie.cache.SetCookieCache;
+import com.alaske.demo.api.cookie.presistence.SharedPrefsCookiePersistor;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
